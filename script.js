@@ -44,7 +44,21 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+        playRound(humanSelection, computerSelection);
+    }
+    
+    if (humanScore > computerScore) {
+        console.log("YOU WIN")
+    } else if (humanScore < computerScore) {
+        console.log("YOU LOST")
+    } else {
+        console.log("TIE GAME")
+    }
+}
+
+playGame()
