@@ -45,12 +45,19 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    let rockButton = document.querySelector(".rock");
+    let paperButton = document.querySelector(".paper");
+    let scissorsButton = document.querySelector(".scissors");
 
-        playRound(humanSelection, computerSelection);
-    }
+    rockButton.addEventListener("click", () => {
+        alert("rock");
+    });
+    paperButton.addEventListener("click", () => {
+        alert("paper");
+    });
+    scissorsButton.addEventListener("click", () => {
+        alert("scissors");
+    });
     
     if (humanScore > computerScore) {
         console.log("YOU WIN")
